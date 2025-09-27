@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Botón para tomar foto -->
+    <Button
+        android:id="@+id/captureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tomar Foto" />
+
+    <!-- Imagen de vista previa -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="#DDDDDD"
-        android:scaleType="centerCrop" />
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Vista previa de la foto" />
 
-    <Button
-        android:id="@+id/captureButton"
-        android:text="📷 Tomar Foto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#6200EE"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:padding="12dp" />
-
+    <!-- Texto para info -->
     <TextView
         android:id="@+id/infoText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Información de la imagen"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp"
-        android:textColor="#333333" />
+        android:text="Sin foto todavía"
+        android:padding="8dp" />
 
+    <!-- Lista de fotos (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFotos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>

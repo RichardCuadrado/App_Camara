@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Para usar getExternalCacheDir() -->
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- Para usar getCacheDir() interno -->
+    <cache-path name="internal_cache" path="." />
+
+    <!-- Para usar getFilesDir() interno -->
+    <files-path name="internal_files" path="." />
+
+    <!-- Opcional: si algún día quieres guardar en Pictures/DCIM -->
+    <external-path name="external_files" path="." />
+</paths>
